@@ -9,8 +9,9 @@ export const POKEMON_DETAIL_RESET = 'POKEMON_DETAIL_RESET';
 
 export const newPokemon = (obj) => {
     console.log("OBJECT",obj)
-    return (dispatch) => { 
-            return axios.post("http://localhost:3001/pokemons",obj)
+    return (dispatch) => {
+            return axios.post("https://pi-pokemon-express-backend.onrender.com/pokemons",obj)
+            /* return axios.post("http://localhost:3001/pokemons",obj) */
             .then((answer)=>         
                 dispatch({
                     type: NEW_POKEMON,
@@ -21,8 +22,9 @@ export const newPokemon = (obj) => {
 }
 
 export const getPokemon = () => {
-    return (dispatch) => { 
-        return axios.get("http://localhost:3001/pokemons")
+    return (dispatch) => {
+        return axios.get("https://pi-pokemon-express-backend.onrender.com/pokemons")
+        /* return axios.get("http://localhost:3001/pokemons") */
         .then((answer)=>         
             dispatch({
                 type: GET_POKEMON,
@@ -34,25 +36,27 @@ export const getPokemon = () => {
 
 export const getPokemonDetail = (id) => {
     return (dispatch) => {
-        return axios.get(`http://localhost:3001/pokemons/${id}`)
-            .then((answer) =>
-                dispatch({
-                    type: GET_POKEMON_BY_ID,
-                    payload: answer.data
-                })
-            )
+        return axios.get(`https://pi-pokemon-express-backend.onrender.com/pokemons/${id}`)
+        /* return axios.get(`http://localhost:3001/pokemons/${id}`) */
+        .then((answer) =>
+            dispatch({
+                type: GET_POKEMON_BY_ID,
+                payload: answer.data
+            })
+        )
     }
 };
 
 export const getPokemonByName = (name) => {
     return (dispatch) => {
-        return axios.get(`http://localhost:3001/pokemons?name=${name}`)
-            .then((answer) =>
-                dispatch({
-                    type: GET_POKEMON_BY_NAME,
-                    payload: answer.data
-                })
-            )
+        return axios.get(`https://pi-pokemon-express-backend.onrender.com/pokemons?name=${name}`)
+        /* return axios.get(`http://localhost:3001/pokemons?name=${name}`) */
+        .then((answer) =>
+            dispatch({
+                type: GET_POKEMON_BY_NAME,
+                payload: answer.data
+            })
+        )
 }
 };
 
@@ -76,7 +80,8 @@ export const getPokemonDetailReset = () => {
 
 export const getTypes = () => {
     return (dispatch) => {
-      return axios.get('http://localhost:3001/types')
+        return axios.get('https://pi-pokemon-express-backend.onrender.com/types')
+      /* return axios.get('http://localhost:3001/types') */
         .then((answer) =>
           dispatch({
             type: GET_TYPES,
