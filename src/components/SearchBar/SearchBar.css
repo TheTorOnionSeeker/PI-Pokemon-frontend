@@ -1,0 +1,18 @@
+.search-bar-container {
+    display: flex;
+    background-color:#6439FF;
+    justify-content:space-between ;
+    padding: 10px;
+    margin: 0px;
+}
+.search-form {
+    display: flex;
+    align-content:stretch ;
+    justify-content: flex-end;
+}
+.input {
+    border-radius: 8px;
+}
+button {
+    border-radius: 8px;
+}

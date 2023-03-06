@@ -1,0 +1,49 @@
+.newPokemonImage {
+    width: 400px;
+    height: 400px;
+ }
+ 
+ .form-container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .form-items{
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .form-items1{
+     margin-left: 15px;
+     margin-right: 15px;
+     justify-content: center;
+ }
+ 
+ .form-items2{
+     margin-right: 15px;
+     justify-content: center;
+ }
+ 
+ .input-item{
+     width: 400px;
+ }
+ 
+ .button-form{
+     color: white;
+     background-image: linear-gradient(to right, #0b24b3 0%, #253166  51%, #2e596d  100%);
+     font-size: 12px;
+     cursor: pointer;
+     transition: transform 250ms;
+     padding: 15px ;
+     margin: 15px;
+     background-image: linear-gradient(to right, #0b24b3 0%, #253166  51%, #2e596d  100%);
+     transition: transform .5s ease;
+     transform: scale(1.1);
+     border-radius: 7px;
+ }
+ 
+ .danger{
+     color: red
+ }
